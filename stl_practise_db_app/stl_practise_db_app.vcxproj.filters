@@ -30,5 +30,11 @@
     <ClCompile Include="User.cpp">
       <Filter>Models</Filter>
     </ClCompile>
+    <ClCompile Include="ContextUsers.cpp">
+      <Filter>DbContext</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceUsers.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

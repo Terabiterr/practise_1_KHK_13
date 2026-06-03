@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ContextUsers.cpp" />
+    <ClCompile Include="ServiceUsers.cpp" />
     <ClCompile Include="stl_practise_db_app.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>

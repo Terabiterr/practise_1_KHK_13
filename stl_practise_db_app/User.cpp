@@ -2,7 +2,8 @@
 #include <string>
 #include <sstream>
 using namespace std;
-struct User {
+class User {
+public:
 	int id;
 	string name;
 
