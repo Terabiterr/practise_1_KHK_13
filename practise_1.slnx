@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="practise_1/practise_1.vcxproj" />
+  <Project Path="stl_practise_db_app/stl_practise_db_app.vcxproj" />
+</Solution>
