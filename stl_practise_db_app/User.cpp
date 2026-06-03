@@ -13,6 +13,7 @@ public:
 			<< "id: " << id
 			<< ", name: " << name
 			<< endl;
+		return ss.str();
 	}
 
 };

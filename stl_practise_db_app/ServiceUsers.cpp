@@ -18,18 +18,42 @@ private:
 public:
 	ServiceUsers(ContextUsers* context) : context{context} {}
 	User& CreateUser(User& user) override {
-		
+		if (&user != nullptr) {
+			context->users.push_back(user);
+			return user;
+		}
+		throw new exception("The user is nullptr ...");
 	}
 	vector<User>& GetAll() override {
 		return context->users;
 	}
 	User& UpdateUser(int id, User& user) override {
-
+		auto &user_found = GetUserById(id);
+		if (&user_found != nullptr) {
+			user_found.id = user.id;
+			user_found.name = user.name;
+			return user_found;
+		}
+		throw new exception("The user not found ...");
 	}
 	User& DeleteUser(int id) override {
-
+		auto user_found = GetUserById(id);
+		if (&user_found != nullptr) {
+			for (auto it = context->users.begin(); it != context->users.end(); it++) {
+				if (it->id == id) {
+					context->users.erase(it);
+					return user_found;
+				}
+			}
+		}
+		throw new exception("The user not found ...");
 	}
 	User& GetUserById(int id) override {
-
+		for (auto& user : context->users) {
+			if (user.id == id) {
+				return user;
+			}
+		}
+		throw new exception("The user not found ...");
 	}
 };
